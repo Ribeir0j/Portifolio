@@ -1,0 +1,228 @@
+/* Garantir que html e body ocupem 100% da altura */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Certifica-se de que a altura do body e html sejam 100% */
+    font-family: Arial, sans-serif;
+    color: white;
+    box-sizing: border-box;  /* Faz com que o padding e border sejam calculados dentro da altura/largura */
+}
+
+/* Estilização geral */
+body {
+    background: linear-gradient(60deg, rgb(30, 80, 78) 0%, rgba(90, 160, 158, 1) 56%);
+    display: flex;
+    flex-direction: column;  /* Organiza o layout verticalmente */
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    min-height: 100vh;  /* Garantir que o body ocupe toda a altura da tela */
+    padding-top: 60px; /* Ajusta o espaço para a navbar, reduziu o padding-top */
+}
+
+/* Header e Navbar */
+header {
+    width: 100%;
+    padding: 5px 8%; /* Reduzi o padding para diminuir a altura da navbar */
+    background: linear-gradient(60deg, rgb(30, 80, 78) 0%, rgba(90, 160, 158, 1) 56%);
+    display: flex;
+    align-items: center;
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Coloca a navbar acima do conteúdo */
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px; /* Define uma altura menor para a navbar */
+}
+
+/* Logo no canto superior esquerdo */
+#nav_logo {
+    width: 200px;  /* Reduzi o tamanho da logo para acompanhar a navbar menor */
+    height: auto;
+    position: absolute;
+    margin-left: -1100px;
+    margin-top: 100px;
+}
+
+/* Estilização da navbar */
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Diminui o espaço entre os itens de navegação */
+    padding: 0;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 16px;  /* Reduz o tamanho da fonte da navbar */
+    padding: 12px;
+}
+
+.navItem a:hover {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0);
+    text-decoration: underline 3px;
+    color: #f8f8f8;
+}
+
+/* Estilização da div left-side */
+.left-side {
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+/* Seção Sobre */
+#sobre {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização do link do WhatsApp */
+.whatsapp-link {
+    display: inline-block;
+    background-color: rgba(90, 160, 158, 1);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-link:hover {
+    background-color: rgb(36, 102, 100);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white; 
+    padding: 5px 0; 
+    text-align: center; 
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Garante que o footer vai para o final da tela */
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: white; /* Cor dos links */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px; /* Espaçamento entre os links */
+    transition: color 0.3s ease; /* Efeito de transição para os links */
+}
+
+footer a:hover {
+    color: #1ABC9C; /* Cor ao passar o mouse */
+}
+
+.right-side{
+    width: 55%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: 600px;
+}
+
+#form {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização do grupo de radio buttons */
+.radio-group {
+    display: flex;
+    gap: 05px;                /* Aumentando o espaçamento entre os radio buttons */
+    align-items: center;   /* Alinhamento vertical no centro */
+    justify-content: center;   
+    flex-direction: row;
+}
+
+/* Estilização do rótulo (label) de cada radio button */
+.radio-label {
+    display: flex;
+    align-items: center;      /* Alinhamento vertical no centro */
+    justify-content: center;  /* Alinhamento horizontal no centro */
+    gap: 10px;                /* Espaçamento entre o texto e o radio button */
+    cursor: pointer;         /* Deixa o cursor em forma de mãozinha quando passar em cima */
+    font-size: 18px;          /* Aumenta o tamanho da fonte */
+    color: #fff;              /* Cor do texto */
+    transition: all 0.3s ease; /* Suaviza a transição de estilos */
+    text-align: center;       /* Garante que o texto dentro do label fique centralizado */
+    padding: 5px 10px;        /* Um pouco de padding para dar mais espaço ao redor */
+    border-radius: 5px;       /* Cantos arredondados */
+    width: auto;              /* Largura automática */
+}
+
+/* Estilizando o radio button escondido */
+input[type="radio"] {
+    display: none;  /* Esconde o radio button original */
+}
+
+/* Estilizando o botão customizado */
+.checkmark {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;  /* Borda branca */
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo do círculo interno (marcador do radio) */
+.checkmark:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Transição de cor e efeito de hover no rótulo */
+.radio-label:hover {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0);  /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo quando o radio button está selecionado */
+input[type="radio"]:checked + .checkmark:after {
+    background-color: #fff;  /* Deixa o círculo interno branco quando selecionado */
+}
+
+#icone-instagram{
+    position: absolute;
+    margin-left: 950px;
+    font-size: 30px ;
+}
+
+.instagram{
+    position: absolute;
+    margin-left: 1150px;
+    font-size: 16px;
+}
