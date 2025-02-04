@@ -57,16 +57,16 @@
                 <div class="radio-group">
                     <label class="radio-label"><label class="radio-label">
                         Base Neutra 
-                        <input type="radio" name="item" id="item">
+                        <input type="radio" name="item" id="base">
                         <span class="checkmark"></span>
                     </label>
                         Paletas
-                        <input type="radio" name="item" id="item">
+                        <input type="radio" name="item" id="paleta">
                         <span class="checkmark"></span>
                     </label>
                     <label class="radio-label">
                         Sorvetes
-                        <input type="radio" name="item" id="item">
+                        <input type="radio" name="item" id="sorvete">
                         <span class="checkmark"></span>
                     </label>
                 </div>
